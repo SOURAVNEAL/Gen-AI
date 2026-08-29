@@ -1,0 +1,34 @@
+from langchain_text_splitters import CharacterTextSplitter
+
+text = """
+The Mind of Silicon
+
+Born not of flesh, nor heart, nor bone,
+ But lines of code and circuits grown.
+ A silent learner, day and night,
+ Turning data into insight.
+
+It reads, it writes, it helps create,
+ Solving problems at a rapid rate.
+ From distant stars to cells so small,
+ AI seeks to understand them all.
+
+Yet wisdom is not found in speed,
+ Nor in every answered need.
+ For human dreams and human care,
+ Give purpose to the thoughts we share.
+
+Together, minds of man and machine,
+ Can build a future yet unseen.
+ Where knowledge flows and barriers fall,
+ And innovation benefits all..
+"""
+
+splitter = CharacterTextSplitter(
+    chunk_size=50,
+    chunk_overlap=10
+)
+
+chunks = splitter.split_text(text)
+
+print(chunks)
